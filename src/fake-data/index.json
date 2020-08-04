@@ -1,0 +1,72 @@
+[
+  {
+    "zipCode": 92071,
+    "response": {
+      "data": [
+        {
+          "parameter": "t_0m:F",
+          "coordinates": [
+            {
+              "station_id": "postal_US92071",
+              "dates": [
+                {
+                  "date": "2020-08-04T14:28:18Z",
+                  "value": 71.4
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "parameter": "t_apparent:F",
+          "coordinates": [
+            {
+              "station_id": "postal_US92071",
+              "dates": [
+                {
+                  "date": "2020-08-04T14:28:18Z",
+                  "value": 73.3
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "zipCode": 10003,
+    "response": {
+      "data": [
+        {
+          "parameter": "t_0m:F",
+          "coordinates": [
+            {
+              "station_id": "postal_US10003",
+              "dates": [
+                {
+                  "date": "2020-08-04T14:28:18Z",
+                  "value": 76.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "parameter": "t_apparent:F",
+          "coordinates": [
+            {
+              "station_id": "postal_US10003",
+              "dates": [
+                {
+                  "date": "2020-08-04T14:28:18Z",
+                  "value": 83.9
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+]
