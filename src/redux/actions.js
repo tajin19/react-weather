@@ -37,16 +37,14 @@ const updateZipCode = (zipCode) => ({
 // }
 
 const fetchCurrentWeatherByZipCode = (zipCode = 92071) => {
-  debugger
   return dispatch => {
-      dispatch(requestCurrentWeatherByZipCode(zipCode))
+    dispatch(requestCurrentWeatherByZipCode(zipCode))
     return new Promise((resolve, reject) => {
+      const zipCodeData = fakeData.find(item => item.zipCode === zipCode)
       setTimeout(() => {
-        debugger
-        const zipCodeData = fakeData.find(item => item.zipCode === zipCode)
         dispatch(receiveCurrentWeatherByZipCode(zipCodeData))
         resolve()
-      }, 1500)
+      }, 1000)
     })
   }
 }

@@ -4,7 +4,7 @@ import actions from '../redux/actions.js'
 
 const mapStateToProps = (state) => {
   return {
-    zipCode: state.zipCode
+    zipCode: state.home.zipCode
   }
 }
 

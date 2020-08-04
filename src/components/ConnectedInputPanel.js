@@ -3,8 +3,7 @@ import InputPanel from './InputPanel.js'
 import actions from '../redux/actions.js'
 
 const mapStateToProps = (state) => ({
-  temperature: state.temperature,
-  zipCode: state.zipCode
+  zipCode: state.home.zipCode
 })
 
 const mapDispatchToProps = dispatch => ({
