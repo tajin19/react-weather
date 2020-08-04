@@ -10,7 +10,7 @@ const requestCurrentWeatherByZipCode = (zipCode) => ({
 
 const receiveCurrentWeatherByZipCode = (json) => ({
   type: types.RECEIVE_CURRENT_WEATHER_BY_ZIP_CODE,
-  currentWeatherData: json,
+  zipCodeWeather: json,
   receivedAt: Date.now()
 })
 
@@ -43,7 +43,8 @@ const fetchCurrentWeatherByZipCode = (zipCode = 92071) => {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         debugger
-        dispatch(receiveCurrentWeatherByZipCode(fakeData))
+        const zipCodeData = fakeData.find(item => item.zipCode === zipCode)
+        dispatch(receiveCurrentWeatherByZipCode(zipCodeData))
         resolve()
       }, 1500)
     })

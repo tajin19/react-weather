@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import ConnectedTextInput from './ConnectedTextInput.js'
-//import '../App.css'
 
 class InputPanel extends Component {
 

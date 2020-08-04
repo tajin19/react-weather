@@ -1,8 +1,8 @@
 import types from './types'
 
 const INITIAL_STATE = {
-  temperature: null,
-  zipCode: null
+  zipCode: null,
+  zipCodeWeather: null
 }
 
 const homeReducer = (state=INITIAL_STATE, action) => {
@@ -15,6 +15,14 @@ const homeReducer = (state=INITIAL_STATE, action) => {
       return {
         ...state,
         temperature
+      }
+    }
+    case types.RECEIVE_CURRENT_WEATHER_BY_ZIP_CODE: {
+      debugger
+      const { zipCodeWeather } = action
+      return {
+        ...state,
+        zipCodeWeather
       }
     }
     case types.UPDATE_ZIP_CODE: {
