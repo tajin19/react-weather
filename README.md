@@ -1,9 +1,14 @@
 # Known Issues
 
-Please use the following zip codes for testing: 92071 or 10003
+Please use one of the following zip codes for testing: 92071 or 10003.
 
 Had to mock API calls to https://www.meteomatics.com/ due to CORS policy blocking calls from this app. Therefore dummy data is read from local json file with a 1-second delay to simulate network latency. To keep JSON file small only two zip codes are supported (see above). 
 
+For some reason GitHub Pages renders the degree symbol and unit (F or C) at line bottom instead of the top. 
+
+## Notes
+
+Tested in Chrome and Firefox on Linux and Windows.
 
 ## Available Scripts
 
