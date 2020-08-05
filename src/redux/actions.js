@@ -1,6 +1,4 @@
-import types from './types.js';
-//import RequestBuilder from "../util/requestBuilder";
-//import fetch from "cross-fetch";
+import types from './types.js'
 import fakeData from '../fake-data/index.json'
 
 const requestCurrentWeatherByZipCode = (zipCode) => ({
@@ -19,36 +17,20 @@ const updateZipCode = (zipCode) => ({
   zipCode: zipCode
 })
 
-// const fetchCurrentWeatherByZipCode = (zipCode = 92071) => {
-//   debugger
-//   return dispatch => {
-//     dispatch(requestCurrentWeatherByZipCode(zipCode))
-//     const requestBuilder = new RequestBuilder()
-//     const request = requestBuilder.BuildRequestForTemperatureForZipCode(zipCode)
-//     return fetch(request)
-//     .then(response => response.json())
-//     .then(json => {
-//       dispatch(receiveCurrentWeatherByZipCode(json))
-//     })
-//     .catch((error) => {
-//       console.error(error)
-//     })
-//   }
-// }
-
-const fetchCurrentWeatherByZipCode = (zipCode = 92071) => {
+const fetchCurrentWeatherByZipCode = (zipCode) => {
   return dispatch => {
     dispatch(requestCurrentWeatherByZipCode(zipCode))
     return new Promise((resolve, reject) => {
-      const zipCodeData = fakeData.find(item => item.zipCode === zipCode)
       setTimeout(() => {
+        const zipCodeData = fakeData.find(item => {
+          return item.zipCode == zipCode
+        })
         dispatch(receiveCurrentWeatherByZipCode(zipCodeData))
         resolve()
       }, 1000)
     })
   }
 }
-
 
 export default {
   requestCurrentWeatherByZipCode,

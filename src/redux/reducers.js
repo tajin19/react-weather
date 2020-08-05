@@ -1,7 +1,7 @@
 import types from './types'
 
 const INITIAL_STATE = {
-  zipCode: null,
+  zipCode: '',
   zipCodeWeather: {
     temperature: null,
     apparentTemperature: null,

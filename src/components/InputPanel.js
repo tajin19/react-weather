@@ -4,7 +4,6 @@ import ConnectedTextInput from './ConnectedTextInput.js'
 class InputPanel extends Component {
 
   handleFetchButtonClick = () => {
-    debugger
     this.props.fetchCurrentWeatherByZipCode(this.props.zipCode)
   }
 
