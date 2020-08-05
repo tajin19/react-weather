@@ -27,7 +27,7 @@ const fetchCurrentWeatherByZipCode = (zipCode) => {
         })
         dispatch(receiveCurrentWeatherByZipCode(zipCodeData))
         resolve()
-      }, 1000)
+      }, 1500)
     })
   }
 }

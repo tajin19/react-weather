@@ -23,7 +23,7 @@ class WeatherPanel extends Component {
     } else if (temperature && apparentTemperature && high && low) {
       weather = <div className="temperature-side">
                     <div className="high-low-line"><span className="high-temp-span">{ Math.round(high) }&deg;</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span className="low-temp-span">{ Math.round(low) }&deg;</span></div>
-                    <div className="main-temp-line">{ Math.round(temperature) }<sup>&deg;F</sup></div>
+                    <div className="main-temp-line">{ Math.round(temperature) }<sup className="main-unit-indicator">&deg;F</sup></div>
                     <div className="apparent-temp-line">LIKE <span>{ Math.round(apparentTemperature) }&deg;</span></div>
                   </div>
 
