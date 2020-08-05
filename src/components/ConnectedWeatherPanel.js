@@ -4,23 +4,26 @@ import WeatherPanel from './WeatherPanel.js'
 const mapStateToProps = (state) => {
   if (state.home.zipCodeWeather) {
     const {
-      temperature,
       apparentTemperature,
       high,
-      low
+      low,
+      temperature
     } = state.home.zipCodeWeather
+    const { requestingData } = state.home
     return {
-      temperature,
       apparentTemperature,
       high,
-      low
+      low,
+      requestingData,
+      temperature
     }
   } else {
     return {
-      temperature: null,
       apparentTemperature: null,
       high: null,
-      low: null
+      low: null,
+      requestingData: false,
+      temperature: null
     }
   }
 }

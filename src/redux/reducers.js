@@ -1,6 +1,7 @@
 import types from './types'
 
 const INITIAL_STATE = {
+  requestingData: false,
   zipCode: '',
   zipCodeWeather: {
     temperature: null,
@@ -13,10 +14,18 @@ const INITIAL_STATE = {
 const homeReducer = (state=INITIAL_STATE, action) => {
   switch(action.type) {
     case types.FETCH_CURRENT_WEATHER_BY_ZIP_CODE: {
-      return state
+      return {
+        ...state,
+        requestingData: true
+      }
+    }
+    case types.REQUEST_CURRENT_WEATHER_BY_ZIP_CODE: {
+      return {
+        ...state,
+        requestingData: true
+      }
     }
     case types.RECEIVE_CURRENT_WEATHER_BY_ZIP_CODE: {
-      debugger
       const { zipCodeWeather } = action
       const { data } = zipCodeWeather.response
       if (data) {
@@ -56,10 +65,14 @@ const homeReducer = (state=INITIAL_STATE, action) => {
         }
         return {
           ...state,
-          zipCodeWeather: newWeatherObject
+          zipCodeWeather: newWeatherObject,
+          requestingData: false
         }
       } else {
-        return state
+        return {
+          ...state,
+          requestingData: false
+        }
       }
     }
     case types.UPDATE_ZIP_CODE: {
