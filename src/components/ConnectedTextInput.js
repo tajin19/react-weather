@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
-import TextInput from './TextInput.js'
 import actions from '../redux/actions.js'
+import TextInput from './TextInput.js'
 
 const mapStateToProps = (state) => {
   return {

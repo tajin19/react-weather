@@ -1,12 +1,12 @@
 import util from './util.js'
 
 export default class RequestBuilder {
-  constructor(baseUrl = 'api.meteomatics.com', useHTTPS = false, responseFormat = 'json', useMetric = false) {
-    //this.baseUrl = useHTTPS ? 'https' : 'http'
+  constructor(baseUrl = 'api.meteomatics.com', useHTTPS = true, responseFormat = 'json', useMetric = false) {
+    const httpMode = useHTTPS ? 'https' : 'http'
     //NOTE: would never put credentials in public repository for production apps
     const userName = 'snapbaseinc_metcalf'
     const password = 'l1gG4KTX5sjDv'
-    this.baseUrl = `${this.baseUrl}://${userName}:${password}@${baseUrl}`
+    this.baseUrl = `${httpMode}://${userName}:${password}@${baseUrl}`
     this.responseFormat = responseFormat
     this.useMetric = useMetric
   }

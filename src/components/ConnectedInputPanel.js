@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
-import InputPanel from './InputPanel.js'
 import actions from '../redux/actions.js'
+import InputPanel from './InputPanel.js'
 
 const mapStateToProps = (state) => ({
   zipCode: state.home.zipCode
