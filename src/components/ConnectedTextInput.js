@@ -9,7 +9,8 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = dispatch => ({
-  updateZipCode: (zipCode) => dispatch(actions.updateZipCode(zipCode))
+  updateZipCode: (zipCode) => dispatch(actions.updateZipCode(zipCode)),
+  fetchCurrentWeatherByZipCode: (zipCode) => dispatch(actions.fetchCurrentWeatherByZipCode(zipCode))
 })
 
 const ConnectedTextInput = connect(

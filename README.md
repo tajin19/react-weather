@@ -1,8 +1,12 @@
 # Known Issues
 
-Please use one of the following zip codes for testing: 92071 or 10003.
+Any 5 digit US zip code should work. Foreign zip codes have not been tested.
 
-Had to mock API calls to https://www.meteomatics.com/ due to CORS policy blocking calls from this app. Therefore dummy data is read from local json file with a 1-second delay to simulate network latency. To keep JSON file small only two zip codes are supported (see above). 
+## NEW
+
+Input now accepts carriage returns.
+
+Upon request failure, an error message will be displayed for 3 seconds. This can be tested by entering a 3-digit zip code.
 
 ##TO DO
 

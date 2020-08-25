@@ -6,6 +6,12 @@ class TextInput extends Component {
     this.props.updateZipCode(e.target.value)
   }
 
+  onKeyDown = (e) => {
+    if(e.keyCode === 13) {
+        this.props.fetchCurrentWeatherByZipCode(this.props.zipCode)
+    }
+  }
+
   render() {
       return (
             <input
@@ -14,6 +20,7 @@ class TextInput extends Component {
                 value = { this.props.zipCode }
                 size="5"
                 onChange= {event => this.onChangeField(event)}
+                onKeyDown= {event => this.onKeyDown(event)}
               />
       )
   }
