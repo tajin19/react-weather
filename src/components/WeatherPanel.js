@@ -3,9 +3,14 @@ import React, { Component } from 'react'
 class WeatherPanel extends Component {
 
   render() {
-    const {apparentTemperature, high, low, requestingData, temperature} = this.props
+    const {apparentTemperature, high, low, requestingData, showErrorPanel, temperature} = this.props
     let weather
-    if (requestingData) {
+    if (showErrorPanel) {
+      weather = <div style={{textAlign: 'center'}}>
+                  <h1 style={{color: 'red'}}>Error requesting data!</h1>
+                  <h2>Please try again later</h2>
+                </div>
+    } else if (requestingData) {
       weather = <div className="loading-wrapper">
         <div className="sk-cube-grid">
           <div className="sk-cube sk-cube1"></div>

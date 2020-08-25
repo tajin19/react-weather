@@ -9,12 +9,13 @@ const mapStateToProps = (state) => {
       low,
       temperature
     } = state.home.zipCodeWeather
-    const { requestingData } = state.home
+    const { requestingData, showErrorPanel } = state.home
     return {
       apparentTemperature,
       high,
       low,
       requestingData,
+      showErrorPanel,
       temperature
     }
   } else {
@@ -23,6 +24,7 @@ const mapStateToProps = (state) => {
       high: null,
       low: null,
       requestingData: false,
+      showErrorPanel: false,
       temperature: null
     }
   }
