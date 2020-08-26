@@ -4,11 +4,13 @@ Any 5 digit US zip code should work. Foreign zip codes have not been tested.
 
 ## NEW
 
+Unit testing has been added using Facebook's Jest framework. To run: `npm test`
+
 Input now accepts carriage returns.
 
 Upon request failure, an error message will be displayed for 3 seconds. This can be tested by entering a 3-digit zip code.
 
-##TO DO
+## TO DO
 
 Include media queries so input and weather panels will flow vertical for narrow resolutions.
 ## Notes
